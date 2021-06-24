@@ -1,6 +1,5 @@
 import 'package:canton_design_system/canton_design_system.dart';
-import 'package:canton_news_app/src/models/source.dart';
-import 'package:canton_news_app/src/ui/styled_components/category_card.dart';
+import 'package:canton_news_app/src/ui/providers/categories_provider.dart';
 
 class CategoryListView extends StatefulWidget {
   final searchController = TextEditingController();
@@ -16,16 +15,6 @@ class _CategoryListViewState extends State<CategoryListView> {
       body: _content(context),
     );
   }
-
-  List<String> categories = [
-    'Business',
-    'Entertainment',
-    'General',
-    'Health',
-    'Science',
-    'Sports',
-    'Technology',
-  ];
 
   Widget _content(BuildContext context) {
     return Column(
@@ -57,7 +46,34 @@ class _CategoryListViewState extends State<CategoryListView> {
     return Expanded(
       child: ListView.separated(
         itemBuilder: (context, index) {
-          return CategoryCard(Source(category: categories[index]));
+          String category = categories[index];
+          return CheckboxListTile(
+            activeColor: Theme.of(context).primaryColor,
+            title: Row(children: [
+              Container(
+                padding: const EdgeInsets.all(5),
+                child: Text(
+                  category.substring(0, 1),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline5
+                      .copyWith(color: Theme.of(context).primaryColor),
+                ),
+              ),
+              SizedBox(width: 7),
+              Expanded(
+                child: Text(category,
+                    style: Theme.of(context).textTheme.headline6),
+              )
+            ]),
+            value: categoriesState[index],
+            onChanged: (value) {
+              // TODO use providers
+              setState(() {
+                categoriesState[index] = value;
+              });
+            },
+          );
         },
         separatorBuilder: (context, index) {
           return SizedBox(height: 7);
