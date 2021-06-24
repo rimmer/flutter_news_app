@@ -6,6 +6,7 @@ class Article {
   String author;
   String title;
   String content;
+  String url;
   String imagePath;
   String publishedAt;
 
@@ -15,6 +16,7 @@ class Article {
     this.author,
     this.title,
     this.content,
+    this.url,
     this.imagePath,
     this.publishedAt,
   });
@@ -42,6 +44,7 @@ class Article {
       'author': author,
       'title': title,
       'content': content,
+      'url': url,
       'urlToImage': imagePath,
       'publishedAt': publishedAt,
     };
@@ -56,6 +59,7 @@ class Article {
       author: map['author'] as String,
       title: map['title'] as String,
       content: map['content'] as String,
+      url: map['url'] as String,
       imagePath: map['urlToImage'] as String,
       publishedAt: map['publishedAt'] as String,
     );
