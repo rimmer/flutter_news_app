@@ -55,7 +55,7 @@ class _SourceViewState extends State<SourceView> {
                 /// Sets ChildCount to one incase of error and needs to display on Item in the list
                 /// This also allows the use of the [RefreshList] widget, to refresh the feed.
 
-                ArticleList(articles, false, true),
+                ArticleList(articles, true),
                 ArticleGrid(articles, true),
               ],
             );

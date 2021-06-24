@@ -51,7 +51,7 @@ class _CategoryViewState extends State<CategoryView> {
                   onRefresh: () async =>
                       await context.refresh(newsCategoryProvider),
                 ),
-                ArticleList(articles, false, false),
+                ArticleList(articles, false),
                 ArticleGrid(articles, false),
               ],
             );

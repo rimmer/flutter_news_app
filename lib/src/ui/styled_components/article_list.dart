@@ -1,14 +1,13 @@
 import 'package:canton_design_system/canton_design_system.dart';
 import 'package:canton_news_app/src/models/article.dart';
 import 'article_card_medium.dart';
-import 'covid19_card.dart';
 
 import 'article_card_large.dart';
 
 class ArticleList extends StatelessWidget {
-  const ArticleList(this.articles, this.showCovid19Card, this.source);
+  const ArticleList(this.articles, this.source);
   final List<Article> articles;
-  final bool showCovid19Card, source;
+  final bool source;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +17,7 @@ class ArticleList extends StatelessWidget {
           if (articles.length != 0 && index <= 5) {
             switch (index) {
               case 0:
-                return showCovid19Card ? COVID19Card() : Container();
+                return Container();
               case 1:
                 return ArticleCardLarge(articles[index], source);
               default:
