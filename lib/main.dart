@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return CantonApp(
       title: kAppTitle,
-      primaryLightColor: CantonColors.green,
-      primaryDarkColor: CantonDarkColors.green,
+      primaryLightColor: CantonColors.pink,
+      primaryDarkColor: CantonDarkColors.pink,
       home: CurrentView(),
     );
   }

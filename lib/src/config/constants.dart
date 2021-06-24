@@ -1,2 +1,2 @@
 // App title
-const String kAppTitle = 'News App';
+const String kAppTitle = 'ION';

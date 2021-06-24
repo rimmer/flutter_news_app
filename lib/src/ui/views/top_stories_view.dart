@@ -60,13 +60,7 @@ class _TopStoriesViewState extends State<TopStoriesView> {
       floating: true,
       elevation: 0,
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      title: Text(
-        'Top Stories',
-        style: Theme.of(context)
-            .textTheme
-            .headline5
-            .copyWith(color: Theme.of(context).primaryColor),
-      ),
+      title: Image(image: AssetImage('assets/icons/logo.png'), height: 48),
       centerTitle: true,
       leading: CantonActionButton(
         icon: IconlyIcon(

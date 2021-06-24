@@ -47,7 +47,7 @@ class TopSourcesView extends ConsumerWidget {
         style: Theme.of(context)
             .textTheme
             .headline5
-            .copyWith(color: CantonColors.green),
+            .copyWith(color: Theme.of(context).primaryColor),
       ),
       centerTitle: true,
     );
