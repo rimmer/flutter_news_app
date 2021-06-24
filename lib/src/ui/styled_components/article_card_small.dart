@@ -19,7 +19,7 @@ class ArticleCardSmall extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             ClipSquircleBorder(
-              radius: 45,
+              radius: BorderRadius.circular(45),
               child: Image.network(
                 article.getImageUrl,
                 fit: BoxFit.cover,

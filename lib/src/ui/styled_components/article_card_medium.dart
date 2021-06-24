@@ -68,7 +68,7 @@ class ArticleCardMedium extends StatelessWidget {
               Flexible(
                 flex: 1,
                 child: ClipSquircleBorder(
-                  radius: 40,
+                  radius: BorderRadius.circular(40),
                   child: Image.network(
                     article.getImageUrl,
                     fit: BoxFit.cover,
